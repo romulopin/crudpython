@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% load bootstrap %}
+{% block title %}
+Cadastro de Clientes
+{% endblock title %}
+
+{% block content %}
+
+<form method="post">
+        {% csrf_token %}
+    {{ form|bootstrap }}
+    <button type="submit" class="btn btn-primary">
+        Salvar
+    </button>
+</form>
+
+{% endblock content %}

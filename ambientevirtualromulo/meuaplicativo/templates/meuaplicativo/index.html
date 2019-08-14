@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html lang="pt-br" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com.br/favicon.ico">
+
+    <title>Template para sticky footer e navbar fixa, usando Bootstrap.</title>
+
+    <!-- Principal CSS do Bootstrap -->
+    <link href="https://getbootstrap.com.br/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos customizados para esse template -->
+    <link href="https://getbootstrap.com.br/docs/4.1/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+    <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+  </head>
+
+  <body class="d-flex flex-column h-100">
+
+    <header>
+      <!-- Navbar fixa -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="home">EBI INFORMÁTICA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="client_form.html">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vendedores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Produtos e Serviços</a>
+            </li>
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Pesquisa" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Começa o conteúdo da página -->
+    <main role="main" class="flex-shrink-0">
+      <div class="container">
+        <h1 class="mt-5">Pequeno CRUD de Clientes, Vendedores, Produtos e Serviços</h1>
+        <p class="lead">Este é um pequeno sistema de CRUD feito para avaliação da contratação do cargo de desenvolvedor pleno da empresa EBI informática</p>
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted">Desenvolvido por Rômulo Silva Pinheiro - romulo.s.pinheiro@gmail.com - (91) 98187-7843</span>
+      </div>
+    </footer>
+
+    <!-- Principal JavaScript do Bootstrap
+    ================================================== -->
+    <!-- Foi colocado no final para a página carregar mais rápido -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com.br/docs/4.1/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com.br/docs/4.1/dist/js/bootstrap.min.js"></script>
+    <div class="container">
+    {% block content %}
+
+    {% endblock %}
+    </div>
+  </body>
+</html>
